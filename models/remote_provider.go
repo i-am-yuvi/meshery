@@ -476,8 +476,6 @@ func (l *RemoteProvider) LoadAllK8sContext(token string) ([]*K8sContext, error) 
 
 		results = append(results, res.Contexts...)
 
-		logrus.Println("totalCount: ", res.TotalCount)
-
 		if (page+1)*pageSize >= res.TotalCount {
 			break
 		}
